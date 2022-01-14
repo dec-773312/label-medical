@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Image Labeling System</title>
+
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #5f7388;
+    }
+
+    login {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -150px 0 0 -150px;
+      width: 300px;
+      height: 300px;
+    }
+
+    login h1 {
+      color: #fff;
+      text-shadow: 0 0 10px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    td {
+      font-size: 1.2em;
+      margin: 0.67em 0;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+      color: #fff;
+      letter-spacing: 1px;
+      background-color: rgba(2, 9, 24, 0.5);
+    }
+
+     p {
+      font-size: 1em;
+      margin: 0.67em 0;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 278px;
+      height: 50px;
+      margin-bottom: 10px;
+      outline: none;
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      border-top: 1px solid #312E3D;
+      border-left: 1px solid #312E3D;
+      border-right: 1px solid #312E3D;
+      border-bottom: 1px solid #56536A;
+      border-radius: 4px;
+      background-color: rgba(2, 9, 24, 0.5);
+    }
+
+    .but {
+      width: 300px;
+      min-height: 20px;
+      display: block;
+      background-color: #4a77d4;
+      border: 1px solid #3762bc;
+      color: #fff;
+      padding: 9px 14px;
+      font-size: 15px;
+      line-height: normal;
+      border-radius: 5px;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+    <h1 align="center">Medical Image Labeling System</h1>
+</body>
+
+<body>
+    <tr>
+    <td> <table width="1200" border="0" cellpadding="2" align="center">
+         <tr>
+         <td height="50" align="center">Medical Image Input</td>
+         </tr>
+         <tr><td height="300" align="center">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{ form.user }} {{ form.user.errors }}</p>
+                <p>{{ form.headimg }} {{ form.headimg.errors }}</p>
+                <p>1、problem 1</p>
+                <p>2、problem 2</p>
+                <p>3、problem 3</p>
+                <p>choices:{{ form.label }} {{ form.label.errors }}</p>
+                <p>Diagnosis：</p>
+                <p>{{ form.diag }} {{ form.diag.errors }}</p>
+            <input type="submit"/>
+            </form>
+            </td>
+         </tr>
+    </table></td>
+    </tr>
+</body>
+
+</html>
